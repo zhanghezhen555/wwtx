@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+        <title>匠人</title>
+        <meta id="de" name="description" content="匠人" />
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="http://cdn.bootcss.com/zepto/1.1.5/zepto.min.js"></script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script type="text/javascript" src="./js/zepto.alert.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/zepto.alert.css">
+        <style>
+            .panel{
+                border-radius:0px;background-color:transparent;color: #d4ab66
+            }
+            .panel-heading{
+                padding:0px;
+
+            }
+            .btn-default{
+                background-color: #F5F5F5;
+                border-color: #B9A644;
+                color: #B9A644;
+                border-radius:20px;
+            }
+            #lists .row{
+                height: 50px;
+            }
+            .h4, .h5, .h6, h4, h5, h6{
+                margin-bottom:5px;
+                margin-top: 5px;
+            }
+            .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover{
+                color: #333;
+                background-color: #f5ede0;
+                border-color: #8c8c8c;
+            }
+            .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover{
+                color: #333;
+                background-color: #f5ede0;
+                border-color: #8c8c8c;
+            }
+            .mylogo{color:#D4CCCC}
+            body { 
+            padding-bottom: 60px;
+            background:url("img/bg.jpg") fixed center center no-repeat;
+            background-size: cover; padding-left: 15px; padding-right: 15px; 
+            }
+            .panel{
+                border:none;margin-bottom:0px; 
+            }
+            .progress{
+                margin-top:10px;height:1px;margin-bottom:0px;background-color:#d4ab66
+            }
+            .thumbnail{
+                padding:0px;border:0px;
+            }
+            .text-nowrap{
+                overflow:hidden;
+            }
+         
+        </style>
+        <script>
+          $(function() {
+            var ds=Math.floor(Math.random()*4+1);
+            $("body").css("background","url(img/bg00"+ds+".jpg)  fixed center center no-repeat");
+            var d='';    
+            $(document).on('ajaxBeforeSend',function(e,xhr,options){
+                 d=$.dialog();
+            });
+            var w = $(window).height();
+            var id = GetQueryString("id");
+            $.getJSON('http://admin.wwtx.org/api/v2/user/share?user_id=' + id, function(data) {
+                d.close();
+                if (data.code ==1) {
+                    alert(data.info);
+                } else {
+                   $(".logo").attr('src',data.data.headimg+"?imageView2/2/w/100"); 
+                    $("#name").html(data.data.user_name); 
+                    $("title").html(data.data.user_name);
+                    $("#de").attr('content',data.data.keyword); 
+                    $("#tag").html(data.data.alias); 
+                    $("#descs").html(data.data.about); 
+                    if(data.data.photos.length!=0){
+                     data.data.photos.map(function(item,index){
+                        var row="<div class='col-md-6 col-xs-6 col-lg-6 col-sm-6'><div class='thumbnail'><img src='"+item.file_name+"'  >";
+                        row+="</div></div>";
+                        $("#photos").append(row);   
+                     });
+                    }else{
+                        $("#photos").remove();
+                        $("#photo_title").remove();
+                    }
+                    if(data.data.goods.length!=0){
+                    data.data.goods.map(function(item,index){
+                        var row="<div class='col-md-6 col-xs-6 col-lg-6 col-sm-6'><div class='thumbnail'><img src='http://www.wwtx.org/"+item.goods_thumb+"'  >";
+                        row+="<div class='caption'><p>"+item.shop_price+"</p><p class='text-nowrap'>"+item.goods_name+"</p></div></div></div>"
+                        $("#lists").append(row);   
+                     });
+                   }else{
+                        $("#lists").remove();
+                        $("#goods").remove();
+                    }
+                }
+            });
+           });        
+            function GetQueryString(name)
+            {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null)
+                    return  unescape(r[2]);
+                return null;
+            }
+        </script>
+    </head>
+<body>
+    <div class="panel panel-default">
+        <div class="text-center" style="margin-top:30px; margin-bottom: 10px" >
+            <img  src="img/authentication.png" class=""  width="105">
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-xs-5 col-lg-5 col-sm-4 " style="padding-right:0px;">
+                <div class="progress text-center" >
+               </div>
+            </div>
+            <div class="col-md-2 col-xs-2 col-lg-2 col-sm-4 text-center" style="padding:0;line-height:20px;height:20px;">匠人信息</div>
+            <div class="col-md-5 col-xs-5 col-lg-5 col-sm-4" style="padding-left:0px;">
+               <div class="progress text-center" >
+               </div>
+            </div>
+        </div>
+        <div class="media" style="font-size:14px;color:#fff;margin-bottom: 10px;line-height:20px;">
+            <div class="media-left text-center">
+                  <img  src=""  class="img-rounded logo" >
+                  <p id="name" class="text-nowrap" style="line-height:30px;">匠人信息</p>
+            </div>
+            <div class="media-body" >
+                <p>擅长:<span id="tag"></span></p>
+                <p  id="descs"  style="height: 100px;overflow: hidden"></p>
+            </div>
+        </div>
+        <div class="row " id="photo_title">
+            <div class="col-md-5 col-xs-5 col-lg-5 col-sm-5 "  style="padding-right:0px;">
+                <div class="progress text-center" >
+               </div>
+            </div>
+            <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 text-center" style="padding:0;line-height:20px;height:20px;">作品展示</div>
+            <div class="col-md-5 col-xs-5 col-lg-5 col-sm-5" style="padding-left:0px;">
+               <div class="progress text-center" >
+               </div>
+            </div>
+       </div>
+       <div class="row" id="photos" style="margin-top:10px; margin-bottom: 10px">
+       </div>
+        <div class="row " id="goods">
+            <div class="col-md-5 col-xs-5 col-lg-5 col-sm-5 "  style="padding-right:0px;">
+                <div class="progress text-center" >
+               </div>
+            </div>
+            <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2 text-center" style="padding:0;line-height:20px;height:20px;">热门商品</div>
+            <div class="col-md-5 col-xs-5 col-lg-5 col-sm-5" style="padding-left:0px;">
+               <div class="progress text-center" >
+               </div>
+            </div>
+       </div>
+       <div class="row" id="lists" style="margin-top:10px; margin-bottom: 10px">
+       </div>
+        
+        
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="border-width: 0px 0 0;padding:5px 13px 5px 13px ;">
+        <div style="padding:5px 0px;opacity: 1;height: 55px;font-size:14px ;border-radius: 5px 5px 5px 5px ;background-color: #fff;">
+            <div class="col-md-3 col-xs-3 col-sm-3" style="padding-right:0px;padding-left:0px;position:relative; "><center><img src="http://www.wwtx.org/download/images/logo.jpg" width="45"></center></div>
+            <div class="col-md-5 col-xs-5 col-sm-5" style="padding-right:0px;padding-left:0px;font-size: 12px;">下载文玩天下官方APP<br>了解更多物品详情及文玩资讯</div>
+            <div class="col-md-4 col-xs-4  col-sm-4" style="padding-right:0px;padding-left:0px;"><center><a href="http://www.wwtx.org/download/wenwan.php" class="btn btn-default">立即下载</a></center></div>
+        </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<div>
+	my
+	<button action-type = "go-register">注册</button>
+</div>

@@ -1,0 +1,18 @@
+<div class = "register-body">
+	<header>
+		<div class = "back" action-type = "hide-register">&lt;</div>
+		<div class = "h-kong"></div>
+		<div class = "h-title">注册</div>
+		<div class = "h-kong"></div>
+	</header>
+	<div class = "content">
+		<div class = "num">
+			<input type = "tel" placeholder = "输入手机号" />	
+			<div>发送验证码</div>
+		</div>
+		<div class = "num">
+			<input type = "text" placeholder = "输入验证码" />	
+		</div>			
+		<div class = "next">下一步</div>
+	</div>
+</div>

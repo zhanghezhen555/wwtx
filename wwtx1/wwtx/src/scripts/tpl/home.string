@@ -1,0 +1,25 @@
+<div class = "home-body">
+	<div>
+		<div class="swiper-container">
+          <div class="swiper-wrapper" >
+             <div class="swiper-slide" ms-repeat-value = "banners">
+               <a href="#"><img ms-src = "value.ad_file"  /></a>
+             </div>             
+           </div>
+           <div class="swiper-pagination"></div>
+        </div>
+		
+		<div class = "stores">
+			<div class = "stores1">
+				<span>热门店铺</span>
+				<span>更多</span>
+			</div>
+			<div class = "stores2">
+				<div ms-repeat-value = "stores">
+					<a href = "#"><img ms-src = "value.ad_file" /></a>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</div>

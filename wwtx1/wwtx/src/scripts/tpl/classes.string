@@ -1,0 +1,16 @@
+<div class = "classes-body">
+	<div class = "search">
+		<div>
+			<i class = "yo-ico">&#xe616;</i>
+			<input type = "text" placeholder = "搜索"/>	
+		</div>
+	</div>
+	<div class = "content">
+		<aside>
+			
+		</aside>
+		<section>
+		
+		</section>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div class = "m-index">
+	<div class = "m-index-body"></div>
+	<footer>
+		<div class = "active" action-type = "tap.switch" data-tag = "home">
+			<i class = "yo-ico">&#xe613;</i>
+			<b>首页</b>
+		</div>
+		<div action-type = "tap.switch" data-tag = "classes">
+			<i class = "yo-ico">&#xe61c;</i>
+			<b>分类</b>
+		</div>
+		<div action-type = "tap.switch" data-tag = "show">
+			<i class = "yo-ico">&#xe657;</i>
+			<b>晒晒</b>
+		</div>
+		<div action-type = "tap.switch" data-tag = "shopcar">
+			<i class = "yo-ico">&#xe611;</i>
+			<b>购物车</b>
+		</div>
+		<div action-type = "tap.switch" data-tag = "my">
+			<i class = "yo-ico">&#xe618;</i>
+			<b>我的</b>
+		</div>
+	</footer>
+</div>

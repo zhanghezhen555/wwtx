@@ -1,0 +1,55 @@
+html,body{
+    font-size:100px;
+    
+    .m-index{
+        width:100%;
+        height:100%;
+        @include flexbox(flex);
+        @include flex-direction(column);
+        font-size:.2rem;
+        
+        >.m-index-body{
+            @include flex(1);
+            @include flexbox(flex);
+            @include flex-direction(column);
+            width:100%;
+            visibility:visible;
+            
+           
+        }
+        
+        footer{
+            width:100%;
+            height:.55rem;
+            background:black;
+            z-index:999;
+            color:white;
+            @include flexbox(flex);
+            visibility:visible;
+            
+            >div{
+                color:whtie;
+                width:20%;
+                height:100%;
+                text-align: center;
+                @include flexbox(flex);
+                @include flex-direction(column);
+                
+                i,b{
+                    display:block;
+                }
+                i{
+                    font-size:22px;
+                }
+                b{
+                    font-size:15px;
+                }
+            }
+            
+            .active{
+                color:#d3ab66;
+            }
+        }
+    }
+}
+

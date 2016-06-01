@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+        <title>晒晒</title>
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="http://cdn.bootcss.com/zepto/1.1.5/zepto.min.js"></script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <style>
+            .panel{
+                border-radius:0px;
+            }
+            .panel-heading{
+                padding:0px;
+                
+            }
+            .btn-default{
+                background-color: #F5F5F5;
+                border-color: #B9A644;
+                color: #B9A644;
+                border-radius:20px;
+            }
+            #lists .row{
+                height: 50px;
+            }
+            .h4, .h5, .h6, h4, h5, h6{
+                margin-bottom:5px;
+                margin-top: 5px;
+            }
+            .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover{
+                color: #333;
+                background-color: #f5ede0;
+                border-color: #8c8c8c;
+            }
+            .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover{
+                      color: #333;
+                background-color: #f5ede0;
+                border-color: #8c8c8c;
+            }
+            .mylogo{color:#D4CCCC}
+            body { padding-bottom: 60px; background-color:#f5f5f5}
+            .panel{
+                border:none;margin-bottom:0px;
+            }
+        </style>
+          <script>
+            var w=$(window).height();
+            var id=GetQueryString("id");
+            $.getJSON('http://admin.wwtx.org/api/v1/show/find?show_id='+id, function(data){
+                if(data.code==2){
+                    alert('晒晒不存在!或者删除');
+                }else{
+                    if(data.data.file_width<w)
+                        w=data.data.file_width;
+                    var url=data.data.file_name+"?imageView2/2/w/"+w;
+                    $("#photo").attr('src',url); 
+                    if(data.data.user.headimg){
+                      $("#avatar").attr('src',data.data.user.headimg+"?imageView2/2/w/100");   
+                    }else{
+                         $("#avatar").attr('src',"http://www.wwtx.org/download/images/logo.jpg");    
+                    }
+                    $("#name").html(data.data.user.user_name); 
+                    $("#time").html(data.data.created_at);
+                    data.data.tags.map(function(item,index){
+                       var h='';
+                        if(item.user.headimg){
+                            h=item.user.headimg+"?imageView2/2/w/100";
+                        }else{
+                          h='http://www.wwtx.org/download/images/logo.jpg';
+                        }
+                        var tag_name=item.tag_name+"|"+item.size;
+                        var row="<div class='row'><div class='col-md-2 col-xs-2 col-lg-2 col-sm-2'><img src='"+h+"' class='img-circle' width='40'> </div>";
+                        row=row+"<div class='col-md-9 col-xs-9 col-lg-9 col-sm-9' ><button class='btn btn-default' >"+tag_name+"</button></div><div class='col-md-1 col-xs-1 col-lg-1 col-sm-1' ></div></div>";
+                        $("#lists").append(row);
+                        console.log(item.tag_name+''+index); 
+                    });
+                    console.log(data); 
+                }
+             });
+             $(function(){
+                $("#lists").click(function(){
+                  $('#myModal').modal({
+                       keyboard: false
+                   }); 
+                });
+             });
+            function GetQueryString(name)
+            {
+                 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                 var r = window.location.search.substr(1).match(reg);
+                 if(r!=null)return  unescape(r[2]); return null;
+            }
+        </script>
+    </head>
+    <body>
+    
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <center>  <img id="photo" src="" class="img-responsive" alt="Responsive image"></center>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2">
+                            <img id="avatar" src="" alt="" class="img-circle" width="40"> 
+                        </div>
+                        <div class="col-md-10 col-xs-10 col-lg-9 col-sm-10" >
+                            <h4 id="name"></h4>
+                            <h6 id="time"></h6>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer" id="lists">
+                   
+                </div>
+              </div>
+<nav class="navbar navbar-default navbar-fixed-bottom" style="border-width: 0px 0 0;padding:5px 13px 5px 13px ;">
+  <div style="padding:5px 0px;opacity: 1;height: 55px;font-size:14px ;border-radius: 5px 5px 5px 5px ;background-color: #fff;">
+           <div class="col-md-3 col-xs-3 col-sm-3" style="padding-right:0px;padding-left:0px;position:relative; "><center><img src="http://www.wwtx.org/download/images/logo.jpg" width="45"></center></div>
+           <div class="col-md-5 col-xs-5 col-sm-5" style="padding-right:0px;padding-left:0px;font-size: 12px;
+}">下载文玩天下官方APP<br>了解更多物品详情及文玩资讯</div>
+           <div class="col-md-4 col-xs-4  col-sm-4" style="padding-right:0px;padding-left:0px;"><center><a href="http://www.wwtx.org/download/wenwan.php" class="btn btn-default">立即下载</a></center></div>
+   </div>
+</nav>
+<!--log-->
+ <div class="modal fade bs-example-modal-sm" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+    <p></p>
+        <p><center><img src="http://www.wwtx.org/download/images/logo.jpg" width="30%"></center></p>
+        <p >  <center><h5 style="line-height: 2;color:#9b9b9b;">下载文玩天下官方APP<br>
+         了解更多物品详情及文玩资讯
+         </h5></center></p>
+         <p><center><a href="http://www.wwtx.org/download/wenwan.php" class="btn btn-default">立即下载</a></center></p>
+         <p></p>
+    </div>
+  </div>
+</div>
+      
+    </body>
+</html>
