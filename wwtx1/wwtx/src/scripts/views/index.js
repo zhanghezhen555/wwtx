@@ -5,7 +5,7 @@ var GetQueryString=function(name)
                 var r = window.location.search.substr(1).match(reg);
                 if (r != null)
                     return  unescape(r[2]);
-                return 'home';
+                return 'classes';
             }
   var id = GetQueryString("id");
   //alert(id);

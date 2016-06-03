@@ -83,7 +83,8 @@ SPA.defineView('home',{
 		  var vm = that.getVM();
 		  //that.getData(vm);
 		  
-		  that.getData(vm,'/wwtx/mock/home.json',{});
+//		  that.getData(vm,'/wwtx/mock/home.json',{});
+			that.getData(vm,'http://101.200.76.57:9090/api/v1/home/index',{});
       
 		  setTimeout(function(){
 		  	var mySwiper = new Swiper('.swiper-container',{
@@ -108,7 +109,8 @@ SPA.defineView('home',{
             } 
             else if (this.y >= 0) {
 //            ajax下拉刷新数据
-              that.getData(vm,'/wwtx/mock/home.json',{});               
+//            that.getData(vm,'/wwtx/mock/home.json',{});       
+							that.getData(vm,'http://101.200.76.57:9090/api/v1/home/index',{});
               myScroll.scrollTo(0, -30);
             }
 
@@ -120,10 +122,10 @@ SPA.defineView('home',{
             else if (maxY >= 0) {
 //            ajax上拉加载数据
               var self = this;
-//            console.log(n)
-//            that.getData(vm,'http://101.200.76.57:9090/api/v1/home/index1?page='+n++,{});  
+//            console.log(n)  
 			
-							var url = '/wwtx/mock/home'+ n++ +'.json';
+//							var url = '/wwtx/mock/home'+ n++ +'.json';
+							var url = 'http://101.200.76.57:9090/api/v1/home/index?page='+n++;
 							getajax.getAction(url,{},function(data){
 								var da = data.goods;
 								getData1(da);

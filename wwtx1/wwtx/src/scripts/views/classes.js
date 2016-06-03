@@ -2,7 +2,13 @@ var tplClasses = require('../tpl/classes.string');
 
 SPA.defineView('classes',{
   html:tplClasses,
-//plugins: ['delegated'],
+plugins: ['delegated',{
+	name:'avalon',
+	options:function(vm){
+		
+	}
+	
+}],
 
   bindEvents: {
     'beforeShow': function () {

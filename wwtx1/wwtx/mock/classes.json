@@ -23,6 +23,25 @@
               "type_img": "http://101.200.76.57/"
             }
           ]
+        },
+        {
+          "cat_id": "6",
+          "cat_name": "南瓜",
+          "type_img": "http://101.200.76.57/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "cat_id": "7",
+      "cat_name": "正式",
+      "type_img": "http://101.200.76.57/",
+      "list": [
+        {
+          "cat_id": "8",
+          "cat_name": "北瓜",
+          "type_img": "http://101.200.76.57/",
+          "children": []
         }
       ]
     }

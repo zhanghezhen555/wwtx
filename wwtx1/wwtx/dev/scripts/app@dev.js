@@ -2158,7 +2158,54 @@ b.params.hashnav&&b.hashnav&&b.hashnav.init(),b.params.a11y&&b.a11y&&b.a11y.init
 
 ;(function(__context){
     var module = {
-        id : "939891a3ad8cdb5e3fc688e4cec488e7" ,
+        id : "ccae0b104aa05342895039521335a480" ,
+        filename : "tools.js" ,
+        exports : {}
+    };
+    if( !__context.____MODULES ) { __context.____MODULES = {}; }
+    var r = (function( exports , module , global ){
+
+    
+window.getajax = (function() {
+
+		function getAction(server, params, fun1) {
+			$.ajax({
+			type: "get",
+			url: server,
+			dataType: 'json',
+			data: params,
+			success: function(result) {
+				if(result.code == 0){
+					if ($.isFunction(fun1)) {
+//						console.log(result.data);
+						fun1(result.data);
+					}
+				}
+				else{
+					alert("数据有误，请稍后重试！");
+				}
+			},
+			error: function() {
+				alert("服务器错误，请稍后重试！");
+			}
+		});
+	}
+		
+	return {
+		getAction: getAction
+	};
+		
+})();
+
+
+    })( module.exports , module , __context );
+    __context.____MODULES[ "ccae0b104aa05342895039521335a480" ] = module.exports;
+})(this);
+
+
+;(function(__context){
+    var module = {
+        id : "0f3ca3853808f6e320bda5b9b457a436" ,
         filename : "home.string" ,
         exports : {}
     };
@@ -2166,63 +2213,24 @@ b.params.hashnav&&b.hashnav&&b.hashnav.init(),b.params.a11y&&b.a11y&&b.a11y.init
     var r = (function( exports , module , global ){
 
     if (typeof window.QTMPL === "undefined") window.QTMPL = {};
-window.QTMPL["home"] = "<div class = \"home-body\">\n\t<div>\n\t\t<div class=\"swiper-container\">\n          <div class=\"swiper-wrapper\" >\n             <div class=\"swiper-slide\" ms-repeat-value = \"banners\">\n               <a href=\"#\"><img ms-src = \"value.ad_file\"  /></a>\n             </div>             \n           </div>\n           <div class=\"swiper-pagination\"></div>\n        </div>\n\t\t\n\t\t<div class = \"stores\">\n\t\t\t<div class = \"stores1\">\n\t\t\t\t<span>热门店铺</span>\n\t\t\t\t<span>更多</span>\n\t\t\t</div>\n\t\t\t<div class = \"stores2\">\n\t\t\t\t<div ms-repeat-value = \"stores\">\n\t\t\t\t\t<a href = \"#\"><img ms-src = \"value.ad_file\" /></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\n\t</div>\n</div>";
+window.QTMPL["home"] = "<div class = \"home-body\"  spa-widget=\"scroll\" data-scroll-id=\"homeScroll\">\n\t<div>\n\t\t<div class = \"head\">\n\t\t\t<img src = \"/wwtx/imgs/loading.gif\" />\n\t\t</div>\n\t\n\t\t<div class=\"swiper-container\">\n          <div class=\"swiper-wrapper\" >\n             <div class=\"swiper-slide\" ms-repeat-value = \"banners\">\n               <a href=\"#\"><img ms-src = \"value.ad_file\"  /></a>\n             </div>             \n           </div>\n           <div class=\"swiper-pagination\"></div>\n        </div>\n\t\t\n\t\t<div class = \"stores\">\n\t\t\t<div>\n\t\t\t\t<span>热门店铺</span>\n\t\t\t\t<span>更多</span>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<div ms-repeat-value = \"stores\">\n\t\t\t\t\t<a href = \"#\"><img ms-src = \"value.ad_file\" /></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t\n\t\t<div class = \"newgoods\">\n\t\t\t<div>\n\t\t\t\t<span>新品上市</span>\n\t\t\t\t<span action-type = \"change-one\">换一组</span>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<div ms-repeat-value = \"news\">\n\t\t\t\t\t<a href = \"#\"><img ms-src = \"value.goods_thumb\" /></a>\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<p ms-text = \"value.goods_name\"></p>\n\t\t\t\t\t\t<p ms-text = \"value.market_price\"></p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t\n\t\t<div class = \"adsbig\">\n\t\t\t<div ms-repeat-value = \"adsbig\">\n\t\t\t\t<a href = \"#\"><img ms-src = \"value.ad_file\" /></a>\n\t\t\t</div>\n\t\t</div>\n\t\t\n\t\t<div class = \"goods\">\n\t\t\t<div>\n\t\t\t\t<span>更多商品</span>\n\t\t\t</div>\n\t\t\t<div class = \"goods1\">\n\t\t\t\t<div ms-repeat-value = \"goods\">\n\t\t\t\t\t<a href = \"#\"><img ms-src = \"value.goods_thumb\" /></a>\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<p ms-text = \"value.goods_name\"></p>\n\t\t\t\t\t\t<p ms-text = \"value.market_price\"></p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t\n\t\t<div class=\"foot\">\n           \t—加载更多—\n        </div>\n\t\n\t</div>\n</div>";
 if (typeof module !== "undefined") module.exports = window.QTMPL["home"];
 
     })( module.exports , module , __context );
-    __context.____MODULES[ "939891a3ad8cdb5e3fc688e4cec488e7" ] = module.exports;
+    __context.____MODULES[ "0f3ca3853808f6e320bda5b9b457a436" ] = module.exports;
 })(this);
 
 
 ;(function(__context){
     var module = {
-        id : "70f66b42e25aaae51b09567b934920a9" ,
-        filename : "tools.js" ,
-        exports : {}
-    };
-    if( !__context.____MODULES ) { __context.____MODULES = {}; }
-    var r = (function( exports , module , global ){
-
-    var Request1 = function(url1,type1){
-	$.ajax({
-        url:url1,
-        type: type1,
-        success:function(res){
-        	if(res.code == 0){
-//      		console.log(res.data);
-				var data = res.data;
-				
-        	}
-        	else{
-        		alert("数据有误，请稍后重试！");
-        	}
-        },
-        error:function(){
-        	alert("服务器发生错误，请稍后重试！");
-        }
-      });
-	return a;
-}
-
-module.exports=Request1;
-
-
-    })( module.exports , module , __context );
-    __context.____MODULES[ "70f66b42e25aaae51b09567b934920a9" ] = module.exports;
-})(this);
-
-
-;(function(__context){
-    var module = {
-        id : "c87ac4147d3f1e8e2d5f3485424c6ff1" ,
+        id : "63173fe35d832453f2ed7ee3d709499e" ,
         filename : "home.js" ,
         exports : {}
     };
     if( !__context.____MODULES ) { __context.____MODULES = {}; }
     var r = (function( exports , module , global ){
 
-    var tplHome =__context.____MODULES['939891a3ad8cdb5e3fc688e4cec488e7'];
-var request1 =__context.____MODULES['70f66b42e25aaae51b09567b934920a9'];
+    var tplHome =__context.____MODULES['0f3ca3853808f6e320bda5b9b457a436'];
 
 SPA.defineView('home',{
   html:tplHome,
@@ -2231,6 +2239,10 @@ SPA.defineView('home',{
     options:function(vm){
     	vm.banners = [];
     	vm.stores = [];
+    	vm.newss = [];
+    	vm.news = [];
+    	vm.adsbig = [];
+    	vm.goods = [];
     }
   }],
   
@@ -2238,65 +2250,194 @@ SPA.defineView('home',{
    	homeSwiper:null,
    	vm:null,
    	
+   	getData:function(vm,url,prams){
+   		getajax.getAction(url,prams,function(data){
+//		  	console.log(data);
+		  	vm.banners = data.banners;
+		  	vm.stores = data.stores;
+        vm.adsbig = data.adsbig;
+        var da = data.news;
+        var da1 = data.goods;
+        getData1(da);
+        getData1(da1);
+        vm.newss = da;
+        da = da.slice(0,2);
+        vm.news = da;
+        vm.goods = da1;
+        
+        function getData1(da){
+	      	for(var i=0; i<da.length; i++){
+			    		da[i].goods_thumb = "http://www.wwtx.org/" + da[i].goods_thumb;
+			    		da[i].market_price = "￥" + da[i].market_price;
+			    }
+	      	return da;
+	      }
+		  })		  
+   	}
    	
-
-    getData: function(vm){
-   	var that = this;
-      $.ajax({
-        url:"http://101.200.76.57:9090/api/v1/home/index",
-        type: "get",
-        success:function(res){
-        	var data = res.data;
-        	vm.banners = data.banners;
-        	vm.stores = data.stores;
-        	console.log(data.stores);
-        }
-      });
-    }
-  },
+//  getData: function(vm){
+// 	var that = this;
+//    $.ajax({
+//      url:"http://101.200.76.57:9090/api/v1/home/index",
+//      type: "get",
+//      success:function(res){
+//      	var data = res.data;
+//      	vm.banners = data.banners;
+//      	vm.stores = data.stores;
+//      	vm.adsbig = data.adsbig;
+//      	var da = data.news;
+//      	var da1 = data.goods;
+//      	getData1(da);
+//      	getData1(da1);
+//      	da = da.slice(0,2);
+//      	vm.news = da;
+//      	vm.goods = da1;
+//    	console.log(data.goods);
+//      	
+//      }
+//    });
+//    
+//    function getData1(da){
+//    	for(var i=0; i<da.length; i++){
+//		    		da[i].goods_thumb = "http://www.wwtx.org/" + da[i].goods_thumb;
+//		    		da[i].market_price = "￥" + da[i].market_price;
+//		    }
+//    	return da;
+//    }
+//  },
+    
+	},
 
   bindEvents: {
   	"beforeShow": function(){
   		
-  		
-//			var data = request1("http://101.200.76.57:9090/api/v1/home/index",'get');
-//			console.log(data);
 			var that = this;
 		  var vm = that.getVM();
-		  that.getData(vm);
+		  //that.getData(vm);
+		  
+//		  that.getData(vm,'/wwtx/mock/home.json',{});
+			that.getData(vm,'http://101.200.76.57:9090/api/v1/home/index',{});
+      
 		  setTimeout(function(){
 		  	var mySwiper = new Swiper('.swiper-container',{
 			      autoplay: 1000,
 			      loop:true,
-	        	pagination: '.swiper-pagination'
+	        	pagination: '.swiper-pagination',
+	        	autoplayDisableOnInteraction : false
 		  	});
-		  },500);
-		  
-		  
-//		   		$('.swiper-pagination-bullet-active').css('background','white');
-//		   		mySwiper.bullets[mySwiper.activeIndex].style.background='white';
+		  },1000);		  
+//		 $('.swiper-pagination-bullet-active').css('background','white');
+//		 mySwiper.bullets[mySwiper.activeIndex].style.background='white';
+			
+			
+			setTimeout(function(){
+				var n = 1;
+	      var myScroll = that.widgets.homeScroll;
+	      myScroll.scrollBy(0,-30);
+	      
+	      myScroll.on('scrollEnd', function () {
+            if (this.y >= -30 && this.y < 0) {
+              myScroll.scrollTo(0, -30);
+            } 
+            else if (this.y >= 0) {
+//            ajax下拉刷新数据
+//            that.getData(vm,'/wwtx/mock/home.json',{});       
+							that.getData(vm,'http://101.200.76.57:9090/api/v1/home/index',{});
+              myScroll.scrollTo(0, -30);
+            }
+
+            var maxY = this.maxScrollY - this.y;
+            if (maxY > -30 && maxY < 0) {
+              var self = this;
+              myScroll.scrollTo(0, self.maxScrollY + 30);
+            }
+            else if (maxY >= 0) {
+//            ajax上拉加载数据
+              var self = this;
+//            console.log(n)  
+			
+//							var url = '/wwtx/mock/home'+ n++ +'.json';
+							var url = 'http://101.200.76.57:9090/api/v1/home/index?page='+n++;
+							getajax.getAction(url,{},function(data){
+								var da = data.goods;
+								getData1(da);
+								var str = "";
+								for(var i=0; i<da.length; i++){
+									str += '<div>'+
+														'<a href = "#"><img src = '+da[i].goods_thumb+' /></a>'+
+														'<div>'+
+															'<p text = '+da[i].goods_name+'></p>'+
+															'<p text = '+da[i].market_price+'></p>'+
+														'</div>'+
+													'</div>';
+								}
+								$('.goods1').append(str);
+								
+								function getData1(da){
+					      	for(var i=0; i<da.length; i++){
+							    		da[i].goods_thumb = "http://www.wwtx.org/" + da[i].goods_thumb;
+							    		da[i].market_price = "￥" + da[i].market_price;
+							    }
+					      	return da;
+					      }
+							});
+							
+							if(n == 5){
+								n=1;
+							}
+              myScroll.scrollTo(0, self.y + 30);
+            }
+        })
+      
+			},0);
+	
   	}
-  
   },
            
    bindActions: {
-//     'tap.switch': function(el, data) {
-//         this.modules.indexContent.launch(data.tag);
-//         this.setActive(data.tag);
-//     }
-   }
+    "change-one":function(){
+   		var vm = this.getVM();
+   		var new2 = [];
+   		var new1 = vm.news[1];
+   		var n;
+   		for(var i=0; i<vm.newss.length; i++){
+   			new2[i] = vm.newss[i];
+   			if(new1.goods_id == vm.newss[i].goods_id){
+   				n = i+1;
+   			}
+   		}
+// 		设置为奇数
+// 		new2 = new2.slice(0,9);
+   		if(n == new2.length){
+   			n = 0;
+   			vm.news = new2.slice(n,n+2);
+   		}
+   		else if(n == new2.length-1){
+   			var a = new2[new2.length-1];
+   			var b = new2[0];
+   			n = 0;
+   			vm.news = [a,b];
+   		}
+   		else{
+   			vm.news = new2.slice(n,n+2);
+   		}
+   		
+    },
+ }
+ 
+ 
 })
     
 
 
     })( module.exports , module , __context );
-    __context.____MODULES[ "c87ac4147d3f1e8e2d5f3485424c6ff1" ] = module.exports;
+    __context.____MODULES[ "63173fe35d832453f2ed7ee3d709499e" ] = module.exports;
 })(this);
 
 
 ;(function(__context){
     var module = {
-        id : "cf5dd0222379b8c1e78ae0fc62b26667" ,
+        id : "4008e1c6eab83ff6846543b9b7a298eb" ,
         filename : "classes.string" ,
         exports : {}
     };
@@ -2304,11 +2445,11 @@ SPA.defineView('home',{
     var r = (function( exports , module , global ){
 
     if (typeof window.QTMPL === "undefined") window.QTMPL = {};
-window.QTMPL["classes"] = "<div class = \"classes-body\">\n\t<div class = \"search\">\n\t\t<div>\n\t\t\t<i class = \"yo-ico\">&#xe616;</i>\n\t\t\t<input type = \"text\" placeholder = \"搜索\"/>\t\n\t\t</div>\n\t</div>\n\t<div class = \"content\">\n\t\t<aside>\n\t\t\t\n\t\t</aside>\n\t\t<section>\n\t\t\n\t\t</section>\n\t</div>\n</div>\n";
+window.QTMPL["classes"] = "<div class = \"classes-body\">\n\t<div class = \"search\">\n\t\t<div>\n\t\t\t<div>\n\t\t\t\t<i class = \"yo-ico\">&#xe616;</i>\n\t\t\t\t<input type = \"text\" placeholder = \"输入分类\"/>\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class = \"content\">\n\t\t<aside>\n\t\t\t<div>\n\t\t\t\t<div>\n\t\t\t\t\t菩提串珠\t\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</aside>\n\t\t\n\t\t<section>\n\t\t\t<div>\n\t\t\t\n\t\t\t\n\t\t\t</div>\n\t\t</section>\n\t</div>\n</div>\n";
 if (typeof module !== "undefined") module.exports = window.QTMPL["classes"];
 
     })( module.exports , module , __context );
-    __context.____MODULES[ "cf5dd0222379b8c1e78ae0fc62b26667" ] = module.exports;
+    __context.____MODULES[ "4008e1c6eab83ff6846543b9b7a298eb" ] = module.exports;
 })(this);
 
 
@@ -2321,7 +2462,7 @@ if (typeof module !== "undefined") module.exports = window.QTMPL["classes"];
     if( !__context.____MODULES ) { __context.____MODULES = {}; }
     var r = (function( exports , module , global ){
 
-    var tplClasses =__context.____MODULES['cf5dd0222379b8c1e78ae0fc62b26667'];
+    var tplClasses =__context.____MODULES['4008e1c6eab83ff6846543b9b7a298eb'];
 
 SPA.defineView('classes',{
   html:tplClasses,
@@ -2461,7 +2602,7 @@ SPA.defineView('shopcar',{
 
 ;(function(__context){
     var module = {
-        id : "4bcd56245c0b5adb8b5d74ca588a2559" ,
+        id : "8b4f0a57ae55e87284d0eebd6eb328db" ,
         filename : "my.string" ,
         exports : {}
     };
@@ -2469,11 +2610,11 @@ SPA.defineView('shopcar',{
     var r = (function( exports , module , global ){
 
     if (typeof window.QTMPL === "undefined") window.QTMPL = {};
-window.QTMPL["my"] = "<div>\n\tmy\n\t<button action-type = \"go-register\">注册</button>\n</div>";
+window.QTMPL["my"] = "<div class = \"my-body\">\n\t<header>\n\t\t个人中心\n\t\t\n\t</header>\n\t\n\t<div class = \"banner\">\n\t\n\t</div>\n\t\n\t\n\t\n\t\n\t<button action-type = \"go-register\">注册</button>\n</div>";
 if (typeof module !== "undefined") module.exports = window.QTMPL["my"];
 
     })( module.exports , module , __context );
-    __context.____MODULES[ "4bcd56245c0b5adb8b5d74ca588a2559" ] = module.exports;
+    __context.____MODULES[ "8b4f0a57ae55e87284d0eebd6eb328db" ] = module.exports;
 })(this);
 
 
@@ -2486,7 +2627,7 @@ if (typeof module !== "undefined") module.exports = window.QTMPL["my"];
     if( !__context.____MODULES ) { __context.____MODULES = {}; }
     var r = (function( exports , module , global ){
 
-    var tplMy =__context.____MODULES['4bcd56245c0b5adb8b5d74ca588a2559'];
+    var tplMy =__context.____MODULES['8b4f0a57ae55e87284d0eebd6eb328db'];
 
 SPA.defineView('my',{
   html:tplMy,
@@ -2639,7 +2780,7 @@ SPA.defineView('index',{
 
 ;(function(__context){
     var module = {
-        id : "c649798919b7c49c480655f98aa9c3da" ,
+        id : "f52db43df24bc75ff2b3d3b14e18969e" ,
         filename : "app.js" ,
         exports : {}
     };
@@ -2650,8 +2791,9 @@ SPA.defineView('index',{
 __context.____MODULES['b339b78823a7d4e256e118d08f80004c'];
 __context.____MODULES['695124f7289a155034d4b8cbdf8df850'];
 __context.____MODULES['cd2bffb7f2508310dfd41bb26a34f44d'];
+__context.____MODULES['ccae0b104aa05342895039521335a480'];
 
-__context.____MODULES['c87ac4147d3f1e8e2d5f3485424c6ff1'];
+__context.____MODULES['63173fe35d832453f2ed7ee3d709499e'];
 __context.____MODULES['90b4c17b7204fdd4909c682dd32acc7b'];
 __context.____MODULES['e336faabe6b9cbef825a1dd1485357b9'];
 __context.____MODULES['d22723e17fe5c5ba7759983922eabe09'];
@@ -2661,5 +2803,5 @@ __context.____MODULES['6e52260f80aafd81dd6dd384db376b7f'];
 
 
     })( module.exports , module , __context );
-    __context.____MODULES[ "c649798919b7c49c480655f98aa9c3da" ] = module.exports;
+    __context.____MODULES[ "f52db43df24bc75ff2b3d3b14e18969e" ] = module.exports;
 })(this);
