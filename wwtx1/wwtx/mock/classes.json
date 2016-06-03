@@ -1,0 +1,30 @@
+{
+  "code": 0,
+  "info": "获取成功",
+  "data": [
+    {
+      "cat_id": "1",
+      "cat_name": "测试",
+      "type_img": "http://101.200.76.57/",
+      "list": [
+        {
+          "cat_id": "2",
+          "cat_name": "西瓜",
+          "type_img": "http://101.200.76.57/",
+          "children": [
+            {
+              "cat_id": "3",
+              "cat_name": "阿萨德",
+              "type_img": "http://101.200.76.57/"
+            },
+            {
+              "cat_id": "5",
+              "cat_name": "小西瓜",
+              "type_img": "http://101.200.76.57/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

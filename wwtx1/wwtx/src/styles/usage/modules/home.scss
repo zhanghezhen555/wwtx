@@ -5,13 +5,26 @@
     @include flex-direction(column);
     position: relative;
     overflow: hidden;
+    margin-bottom:60px;
     
-    div{
+    >div{
         width:100%;
+        
+        >.head{
+            width:100%;
+            height:30px;
+            text-align: center;
+            line-height: 30px;
+//          display:none;
+            
+            >img{
+                widht:auto;
+                height:80%;
+            }
+        }
        
         >.swiper-container{
             width:100%;
-            height:195px;
                 
             >div{
                 width:100%;
@@ -22,17 +35,19 @@
                     >a{
                         >img{
                           width:100%;
-                          height:100%;
+                          height:auto;
                         }
                     }
                 }
             }            
         }
         
-        >.stores{ 
+        >.stores,.newgoods,.goods{ 
             width:100%;
+            margin-bottom:5px;
             
-            >.stores1{
+            >div{
+                &:first-child{
                 width:100%;
                 height:35px;
                 @include flexbox(flex);
@@ -54,26 +69,118 @@
                 }
             }
             
-            >.stores2{
-                width:100%;
-                
-                @include flexbox(flex);
-                @include flex-direction(row);
-                @include flex-wrap(wrap);
-                @include justify-content(space-between);
-                
-                >div{
-                    width:49.9%;
-                    height:90px;
-                    margin-bottom:1px;
+                &:last-child{
+                    width:100%;                   
+                    @include flexbox(flex);
+                    @include flex-direction(row);
+                    @include flex-wrap(wrap);
+                    @include justify-content(space-between);
                     
-                    img{
-                        width:100%;
-                        height:100%;
+                    >div{
+                        width:50%;
+                        @include box-sizing(border-box);
+//                      @include border(1px,white);
+                        border:1px solid white;
+                        
+                        img{
+                            width:100%;
+                            height:auto;
+                        }
                     }
                 }
             }
         }
+        
+        >.newgoods,.goods{
+            >div{
+                &:last-child{
+                    @include flexbox(flex);
+                    @include justify-content(space-around);
+                    >div{
+                        width:48%;
+//                      height:230px;
+                        border:1px solid #8a8a8a;
+//                      @include border(1px,#8a8a8a);
+                        border-radius:8px;
+                        
+                        img{
+                            width:99%;
+//                          height:75%;
+                            height:auto;
+                            border:1px solid black;
+                            border-radius:8px;
+                        }
+                        >div{
+                            width:100%;
+                            height:60px;
+                            font-size:14px;
+                            @include box-sizing(border-box);
+                            padding:12px 6px;
+                            
+                            >p{
+                                &:first-child{
+                                    width:100%;
+                                    overflow:hidden;
+                                    white-space:nowrap;
+                                    text-overflow:ellipsis;
+                                }
+                                
+                                &:last-child{
+                                    color:#d9b171;
+                                }
+                            }
+                        }
+                    }
+                }               
+            }
+        }
+        
+        .adsbig{
+            width:100%;
+            
+            >div{
+                width:100%;
+                height:120px;
+                margin-bottom:2px;
+                
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
+        
+        .goods{
+          >div{
+            &:first-child{
+                >span{
+                    
+                    &:last-child{
+                        color:#d1ab6a;
+                    }                    
+                }
+            } 
+              
+            &:last-child{
+
+              >div{
+                margin-bottom:10px;
+              }
+
+            }
+          }
+        }
+        
+        .foot{
+            width:100%;
+            height:30px;
+            text-align: center;
+            line-height: 30px;;
+            font-size:16px;
+            color:#666;
+//          display:none;
+        }
+            
         
     }
 }

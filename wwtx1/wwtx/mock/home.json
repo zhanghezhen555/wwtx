@@ -1,0 +1,232 @@
+{
+  "code": 0,
+  "info": "",
+  "data": {
+    "banners": [
+       {
+        "id": "33",
+        "ad_name": "活动",
+        "ad_link": "article/250",
+        "ad_file": "http://7xt63u.com2.z0.glb.qiniucdn.com/1464925062.0026.png"
+      },
+      {
+        "id": "37",
+        "ad_name": "大师推荐",
+        "ad_link": "user/2000061",
+        "ad_file": "http://7xt63u.com2.z0.glb.qiniucdn.com/1464925047.5354.png"
+      }
+    ],
+    "ads": [
+      {
+        "id": "34",
+        "ad_name": "活动",
+        "ad_link": "article/250",
+        "ad_file": "http://ac-NEiVridt.clouddn.com/761818aa852be3f2ae92."
+      }
+    ],
+    "stores": [
+      {
+        "id": "36",
+        "ad_name": "活动",
+        "ad_link": "article/250",
+        "ad_file": "http://7xt63u.com2.z0.glb.qiniucdn.com/1464920151.9634.png"
+      },
+      {
+        "id": "41",
+        "ad_name": "活动",
+        "ad_link": "article/250",
+        "ad_file": "http://7xt63u.com2.z0.glb.qiniucdn.com/1464920096.3152.png"
+      },
+      {
+        "id": "42",
+        "ad_name": "活动",
+        "ad_link": "article/250",
+        "ad_file": "http://7xt63u.com2.z0.glb.qiniucdn.com/1464919857.6525.png"
+      },
+      {
+        "id": "43",
+        "ad_name": "活动",
+        "ad_link": "article/250",
+        "ad_file": "http://7xt63u.com2.z0.glb.qiniucdn.com/1464919846.7679.png"
+      }
+    ],
+    "news": [
+      {
+        "goods_id": "465",
+        "goods_name": "玉竹达摩",
+        "shop_price": "1300.00",
+        "promote_price": "0.00",
+        "market_price": "1560.00",
+        "goods_thumb": "images/201510/thumb_img/465_thumb_G_1445887735235.jpg"
+      },
+      {
+        "goods_id": "675",
+        "goods_name": "黄杨木仿竹浮雕人物笔筒",
+        "shop_price": "9000.00",
+        "promote_price": "0.00",
+        "market_price": "10800.00",
+        "goods_thumb": "images/201511/thumb_img/675_thumb_G_1447642129888.jpg"
+      },
+      {
+        "goods_id": "669",
+        "goods_name": "琥珀雕曹智福寿三多摆件",
+        "shop_price": "20000.00",
+        "promote_price": "0.00",
+        "market_price": "24000.00",
+        "goods_thumb": "images/201511/thumb_img/669_thumb_G_1447016997796.jpg"
+      },
+      {
+        "goods_id": "683",
+        "goods_name": "大圣归来",
+        "shop_price": "20000.00",
+        "promote_price": "0.00",
+        "market_price": "24000.00",
+        "goods_thumb": "images/201511/thumb_img/683_thumb_G_1447122001849.jpg"
+      },
+      {
+        "goods_id": "538",
+        "goods_name": "琥珀观音问莲",
+        "shop_price": "10000.00",
+        "promote_price": "0.00",
+        "market_price": "12000.00",
+        "goods_thumb": "images/201511/thumb_img/538_thumb_G_1447122205634.jpg"
+      },
+      {
+        "goods_id": "755",
+        "goods_name": "一代盘龙纹金刚菩提长串",
+        "shop_price": "999.00",
+        "promote_price": "0.00",
+        "market_price": "1198.00",
+        "goods_thumb": "images/201512/thumb_img/755_thumb_G_1448937455530.jpg"
+      },
+      {
+        "goods_id": "421",
+        "goods_name": "阿拉善玛瑙雕鱼",
+        "shop_price": "800.00",
+        "promote_price": "0.00",
+        "market_price": "960.00",
+        "goods_thumb": "images/201510/thumb_img/421_thumb_G_1445474097042.jpg"
+      },
+      {
+        "goods_id": "637",
+        "goods_name": "高密星月菩提创意开光聚宝盆宝瓶佛教七宝念珠手串",
+        "shop_price": "349.01",
+        "promote_price": "0.00",
+        "market_price": "418.81",
+        "goods_thumb": "images/201511/thumb_img/637_thumb_G_1446689713916.jpg"
+      },
+      {
+        "goods_id": "348",
+        "goods_name": "南红雕金蟾与貔貅",
+        "shop_price": "8000.00",
+        "promote_price": "0.00",
+        "market_price": "9600.00",
+        "goods_thumb": "images/201510/thumb_img/348_thumb_G_1444956440863.jpg"
+      },
+      {
+        "goods_id": "785",
+        "goods_name": "测试快递",
+        "shop_price": "0.00",
+        "promote_price": "0.00",
+        "market_price": "0.00",
+        "goods_thumb": ""
+      }
+    ],
+    "adsbig": [
+      {
+        "id": "35",
+        "ad_name": "启动页广告",
+        "ad_link": "article/250",
+        "ad_file": "http://7xt63u.com2.z0.glb.qiniucdn.com/1464831613.6796.png"
+      },
+      {
+        "id": "44",
+        "ad_name": "启动页广告",
+        "ad_link": "article/250",
+        "ad_file": "http://7xt63u.com2.z0.glb.qiniucdn.com/1464831600.9898.png"
+      }
+    ],
+    "goods": [
+      {
+        "goods_id": "634",
+        "goods_name": "高密顺白正月镶银钉配古法琉璃配珠手链手串红绿黄",
+        "shop_price": "49.90",
+        "promote_price": "0.00",
+        "market_price": "59.00",
+        "goods_thumb": "images/201511/thumb_img/634_thumb_G_1446688880481.jpg"
+      },
+      {
+        "goods_id": "1003",
+        "goods_name": "编辑1",
+        "shop_price": "100.00",
+        "promote_price": "0.00",
+        "market_price": "100.00",
+        "goods_thumb": "images/201511/thumb_img/740_thumb_G_1448587386528.jpg"
+      },
+      {
+        "goods_id": "1002",
+        "goods_name": "丝瓜",
+        "shop_price": "10.00",
+        "promote_price": "0.00",
+        "market_price": "10.00",
+        "goods_thumb": "images/201511/thumb_img/752_thumb_G_1448853255305.jpg"
+      },
+      {
+        "goods_id": "999",
+        "goods_name": "名牌1",
+        "shop_price": "10.00",
+        "promote_price": "0.00",
+        "market_price": "10.00",
+        "goods_thumb": "images/201512/thumb_img/754_thumb_G_1448935905043.jpg"
+      },
+      {
+        "goods_id": "998",
+        "goods_name": "名牌",
+        "shop_price": "10.00",
+        "promote_price": "0.00",
+        "market_price": "10.00",
+        "goods_thumb": "1463992963.6585.jpg"
+      },
+      {
+        "goods_id": "800",
+        "goods_name": "删除3",
+        "shop_price": "0.00",
+        "promote_price": "0.00",
+        "market_price": "0.00",
+        "goods_thumb": "1463454836.9297.jpg"
+      },
+      {
+        "goods_id": "847",
+        "goods_name": "狗肉",
+        "shop_price": "10.00",
+        "promote_price": "0.00",
+        "market_price": "10.00",
+        "goods_thumb": "1463987706.9698.jpg"
+      },
+      {
+        "goods_id": "842",
+        "goods_name": "羊肉2",
+        "shop_price": "10.00",
+        "promote_price": "0.00",
+        "market_price": "10.00",
+        "goods_thumb": "10"
+      },
+      {
+        "goods_id": "840",
+        "goods_name": "羊肉22",
+        "shop_price": "10.00",
+        "promote_price": "0.00",
+        "market_price": "10.00",
+        "goods_thumb": ""
+      },
+      {
+        "goods_id": "790",
+        "goods_name": "",
+        "shop_price": "1.00",
+        "promote_price": "0.00",
+        "market_price": "1.20",
+        "goods_thumb": "images/201601/thumb_img/790_thumb_G_1453335962135.jpg"
+      }
+    ]
+  }
+}

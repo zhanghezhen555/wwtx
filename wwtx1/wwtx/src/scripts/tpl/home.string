@@ -1,5 +1,9 @@
-<div class = "home-body">
+<div class = "home-body"  spa-widget="scroll" data-scroll-id="homeScroll">
 	<div>
+		<div class = "head">
+			<img src = "/wwtx/imgs/loading.gif" />
+		</div>
+	
 		<div class="swiper-container">
           <div class="swiper-wrapper" >
              <div class="swiper-slide" ms-repeat-value = "banners">
@@ -10,16 +14,57 @@
         </div>
 		
 		<div class = "stores">
-			<div class = "stores1">
+			<div>
 				<span>热门店铺</span>
 				<span>更多</span>
 			</div>
-			<div class = "stores2">
+			<div>
 				<div ms-repeat-value = "stores">
 					<a href = "#"><img ms-src = "value.ad_file" /></a>
 				</div>
 			</div>
 		</div>
+		
+		<div class = "newgoods">
+			<div>
+				<span>新品上市</span>
+				<span action-type = "change-one">换一组</span>
+			</div>
+			<div>
+				<div ms-repeat-value = "news">
+					<a href = "#"><img ms-src = "value.goods_thumb" /></a>
+					<div>
+						<p ms-text = "value.goods_name"></p>
+						<p ms-text = "value.market_price"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class = "adsbig">
+			<div ms-repeat-value = "adsbig">
+				<a href = "#"><img ms-src = "value.ad_file" /></a>
+			</div>
+		</div>
+		
+		<div class = "goods">
+			<div>
+				<span>更多商品</span>
+			</div>
+			<div class = "goods1">
+				<div ms-repeat-value = "goods">
+					<a href = "#"><img ms-src = "value.goods_thumb" /></a>
+					<div>
+						<p ms-text = "value.goods_name"></p>
+						<p ms-text = "value.market_price"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="foot">
+           	—加载更多—
+        </div>
 	
 	</div>
 </div>

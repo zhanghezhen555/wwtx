@@ -2,6 +2,7 @@
 require('./lib/spa.min.js');
 require('./lib/iscroll.js');
 require('./lib/swiper-3.3.1.min.js');
+require('./lib/tools.js');
 
 require('./views/home.js');
 require('./views/classes.js');
